@@ -186,7 +186,8 @@ body{
 
 @media  (max-width: 766px){
   .info-poke{
-    height: 280px;
+    height: auto;
+    align-content: center;
   }
   .img-pokemonid{
     width: 180px;
@@ -197,18 +198,22 @@ body{
     justify-content: flex-start;
     align-content: flex-start;
   }
+  .content-img-pokeid{
+    order: -1;
+  }
 }
 @media  (max-width: 500px){
   .pokemon-info{
     width: 200px;
     height: 300px;
     font-size: .9rem;
+    padding: 5px;
   }
   .img-pokemon{
     width: 80px;
     height: 100px;
     right: 45px;
-    top: -25px;
+    top: -10px;
   }
   .pokemon-info:hover{
     width: 205px;
