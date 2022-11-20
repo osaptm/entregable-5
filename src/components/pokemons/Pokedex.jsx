@@ -42,12 +42,14 @@ const Pokedex = () => {
     
     return (
         <div className="container text-center">
-    
-            <div className="container-fluid d-flex justify-content-between align-items-center">
-                <h1>POKEDEX</h1>
-                <button className="btn btn-primary" type="button" id="button-addon2" onClick={()=>{alert('config');}}>Config</button>
+            <div className="container-flui header">
+                <div className="container-fluid d-flex justify-content-between align-items-center">
+                    <h1>POKEDEX</h1>
+                    <button className="btn btn-primary" type="button" id="button-addon2" onClick={()=>{alert('config');}}>Config</button>
+                </div>
+                <p className="welcome">Welcome <b>{userName}</b>, hare you can find your favorite pokemon.</p>
             </div>
-            <p style={{color:'#062226',fontSize:'30px'}}>Welcome <b>{userName}</b>, hare you can find your favorite pokemon.</p>
+            
            
             <FiltersPokemon 
             ApiPokemons={ApiPokemons} 

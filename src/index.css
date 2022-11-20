@@ -177,6 +177,9 @@ body{
   gap:10px;
   padding: 0;
 }
+.welcome{
+  font-size: 30px;
+}
 /*********************POKEMON ID*****************************************************/
 @media  (max-width: 992px){
   .info-poke{
@@ -196,13 +199,27 @@ body{
 @media  (max-width: 577px){
   .info-poke{
     justify-content: flex-start;
-    align-content: flex-start;
   }
   .content-img-pokeid{
     order: -1;
   }
 }
 @media  (max-width: 500px){
+  h1 {
+    font-size: 18px;
+  }
+  .btn{
+    font-size: 10px;
+  }
+  .welcome{
+    font-size: 15px;
+  }
+  .form-control{
+    font-size: 10px;
+  }
+  .form-select{
+    font-size: 10px;
+  }
   .pokemon-info{
     width: 200px;
     height: 300px;

@@ -16,7 +16,11 @@ const PokemonCard = ({url}) => {
     const PokeDetail = (idpokemon) => {
         navigate(`/pokemon/${idpokemon}`);
     };
-
+    const PokeTypes = () =>{
+        return ObjPoke.data.types.map(({type}, index)=>{
+             return (type.name[0].toUpperCase() + type.name.substring(1))
+         }).join(',')
+     }
     useEffect(() => { 
         getPoke(url);
       }, []); 
@@ -29,7 +33,7 @@ const PokemonCard = ({url}) => {
                 <img src={pokebola} className="pokebola"/>
                 <img src={ObjPoke.data.sprites.other.dream_world.front_default} className="img-pokemon"/>
             </div>
-            <p><b>Types:</b>TypesArray</p>
+            <p><b>Types:</b>{(ObjPoke.data.types.length!==0) && <PokeTypes />}</p>
             <p><b>HP:</b>{ObjPoke.data.stats[0].base_stat}</p>
             <p><b>Attack:</b>{ObjPoke.data.stats[1].base_stat}</p>
             <p><b>Defense:</b>{ObjPoke.data.stats[2].base_stat}</p>
